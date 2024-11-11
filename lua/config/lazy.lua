@@ -22,7 +22,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.wo.number = true
 vim.wo.relativenumber = true
-
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -36,7 +35,5 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
--- Setup Colorscheme
-vim.cmd.colorscheme "catppuccin"
 
 
