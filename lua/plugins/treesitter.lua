@@ -4,7 +4,8 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup {
       -- List of parsers to install
-      ensure_installed = { "lua", "markdown", "python", "javascript", "c_sharp" },
+      ensure_installed = { "lua", "markdown", "python", "javascript", "c_sharp", "yaml", "json"},
+
 
       -- Enable syntax highlighting
       highlight = {
