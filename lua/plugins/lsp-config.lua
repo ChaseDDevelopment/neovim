@@ -11,26 +11,7 @@ return {
 			require('mason-lspconfig').setup({
 				ensure_installed = {
 					"lua_ls",
-					"bashls",
-					"tailwindcss",
-					"cssls",
-					"css_variables",
-					"ast_grep",
-					"dockerls",
-					"eslint",
 					"ts_ls",
-					"biome",
-					"grammarly",
-					"harper_ls",
-					"pylsp",
-					"ruff",
-					"ruff_lsp",
-					"harper_ls",
-					"rust_analyzer",
-					"sqlls",
-					"sqls",
-					"yamlls"
-
 				}
 			})
 		end
