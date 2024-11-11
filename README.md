@@ -17,3 +17,7 @@ and to install on Arch Linux run:
 ```bash
 sudo pacman -S ripgrep
 ```
+
+## Javascript
+
+I've installed eslinting tools for My React.js projects. This requires the project itself to have eslint installed, and typescript-eslint
