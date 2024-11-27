@@ -38,9 +38,9 @@ return {
             dapui.close()
         end
 
-        vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
-        vim.keymap.set("n", "<Leader>dc", dap.continue, {})
-        vim.keymap.set("n", "<F8>", dap.step_over, {})
-        vim.keymap.set("n", "<F7>", dap.step_into, {})
+        vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint,  { desc = "Toggle Breakpoint" })
+        vim.keymap.set("n", "<Leader>dc", dap.continue, {desc = "Start Debugger/Attach Debugger"})
+        vim.keymap.set("n", "<F8>", dap.step_over, {desc = "Step Over"})
+        vim.keymap.set("n", "<F7>", dap.step_into, {desc = "Step Into"})
     end,
 }

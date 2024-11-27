@@ -10,7 +10,7 @@ return {
 				require("none-ls.diagnostics.eslint")
 			},
 		})
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {desc = "Format File"})
 	end,
 	dependencies = {
 		'nvimtools/none-ls-extras.nvim'

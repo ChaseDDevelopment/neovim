@@ -28,20 +28,20 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
-vim.keymap.set("n", "<C-j>", "<C-d>zz")
-vim.keymap.set("n", "<C-k>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
--- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+-- Visual mode: Move selected lines up or down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
+-- Normal mode: Half-page jump with cursor centered
+vim.keymap.set("n", "<C-j>", "<C-d>zz", { desc = "Scroll half-page down and center" })
+vim.keymap.set("n", "<C-k>", "<C-u>zz", { desc = "Scroll half-page up and center" })
+-- Normal mode: Search result navigation with cursor centered
+vim.keymap.set("n", "n", "nzzzv", { desc = "Go to next search result and center" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Go to previous search result and center" })
+-- Visual mode: Replace selection with clipboard content without overwriting clipboard
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste over selection without overwriting clipboard" })
+-- Copy to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy entire line to system clipboard" })
 vim.g.dotnet_build_project = function()
     local default_path = vim.fn.getcwd() .. '/'
     if vim.g['dotnet_last_proj_path'] ~= nil then
