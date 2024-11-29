@@ -90,11 +90,11 @@ return {
 					normal = "gmd",
 				},
 				-- Show the prompt
-				show_system_prompt = {
+				show_info = {
 					normal = "gmp",
 				},
 				-- Show the user selection
-				show_user_selection = {
+				show_context = {
 					normal = "gms",
 				},
 				-- Show help
@@ -147,7 +147,7 @@ return {
 		keys = {
 			-- Show prompts actions with telescope
 			{
-				"<leader>gcpap",
+				"<leader>cpp",
 				function()
 					local actions = require("CopilotChat.actions")
 					require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
@@ -155,33 +155,33 @@ return {
 				desc = "CopilotChat - Prompt actions",
 			},
 			{
-				"<leader>gcpap",
+				"<leader>cpa",
 				":lua require('CopilotChat.integrations.telescope').pick(require('CopilotChat.actions').prompt_actions({selection = require('CopilotChat.select').visual}))<CR>",
 				mode = "x",
 				desc = "CopilotChat - Prompt actions",
 			},
 			-- Code related commands
-			{ "<leader>gcpae", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
-			{ "<leader>gcpat", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
-			{ "<leader>gcpar", "<cmd>CopilotChatReview<cr>", desc = "CopilotChat - Review code" },
-			{ "<leader>gcpaR", "<cmd>CopilotChatRefactor<cr>", desc = "CopilotChat - Refactor code" },
-			{ "<leader>gcpan", "<cmd>CopilotChatBetterNamings<cr>", desc = "CopilotChat - Better Naming" },
+			{ "<leader>cpe", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
+			{ "<leader>cpT", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
+			{ "<leader>cpr", "<cmd>CopilotChatReview<cr>", desc = "CopilotChat - Review code" },
+			{ "<leader>cpR", "<cmd>CopilotChatRefactor<cr>", desc = "CopilotChat - Refactor code" },
+			{ "<leader>cpn", "<cmd>CopilotChatBetterNamings<cr>", desc = "CopilotChat - Better Naming" },
 			-- Chat with Copilot in visual mode
 			{
-				"<leader>gcpav",
+				"<leader>cpv",
 				":CopilotChatVisual",
 				mode = "x",
 				desc = "CopilotChat - Open in vertical split",
 			},
 			{
-				"<leader>gcpax",
+				"<leader>cpx",
 				":CopilotChatInline<cr>",
 				mode = "x",
 				desc = "CopilotChat - Inline chat",
 			},
 			-- Custom input for CopilotChat
 			{
-				"<leader>gcpai",
+				"<leader>cpi",
 				function()
 					local input = vim.fn.input("Ask Copilot: ")
 					if input ~= "" then
@@ -192,13 +192,13 @@ return {
 			},
 			-- Generate commit message based on the git diff
 			{
-				"<leader>gcpam",
+				"<leader>cpd",
 				"<cmd>CopilotChatCommit<cr>",
 				desc = "CopilotChat - Generate commit message for all changes",
 			},
 			-- Quick chat with Copilot
 			{
-				"<leader>gcpaq",
+				"<leader>cpq",
 				function()
 					local input = vim.fn.input("Quick Chat: ")
 					if input ~= "" then
@@ -208,19 +208,19 @@ return {
 				desc = "CopilotChat - Quick chat",
 			},
 			-- Debug
-			{ "<leader>gcpad", "<cmd>CopilotChatDebugInfo<cr>", desc = "CopilotChat - Debug Info" },
+			{ "<leader>cpD", "<cmd>CopilotChatDebugInfo<cr>", desc = "CopilotChat - Debug Info" },
 			-- Fix the issue with diagnostic
-			{ "<leader>gcpaf", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix Diagnostic" },
+			{ "<leader>cpf", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix Diagnostic" },
 			-- Clear buffer and chat history
 			{
-				"<leader>gcpal",
+				"<leader>cpl",
 				"<cmd>CopilotChatReset<cr>",
 				desc = "CopilotChat - Clear buffer and chat history",
 			},
 			-- Toggle Copilot Chat Vsplit
-			{ "<leader>gcpav", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - Toggle" },
+			{ "<leader>cpt", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - Toggle" },
 			-- Copilot Chat Models
-			{ "<leader>gcpa?", "<cmd>CopilotChatModels<cr>", desc = "CopilotChat - Select Models" },
+			{ "<leader>cpm?", "<cmd>CopilotChatModels<cr>", desc = "CopilotChat - Select Models" },
 		},
 	},
 }
