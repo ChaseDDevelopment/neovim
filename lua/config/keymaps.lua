@@ -13,5 +13,5 @@ vim.keymap.set(
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
 -- Normal mode: Half-page jump with cursor centered
-vim.keymap.set("n", "<C-j>", "<C-d>zz", { desc = "Scroll half-page down and center" })
-vim.keymap.set("n", "<C-k>", "<C-u>zz", { desc = "Scroll half-page up and center" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll half-page down and center" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll half-page up and center" })
